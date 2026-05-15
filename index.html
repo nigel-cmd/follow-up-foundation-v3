@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become The Operator — True Products Network</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero {
+            background: #0f0f0f;
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero .subheadline {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .mechanism {
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        .price-note {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #fbbf24;
+            color: #0f0f0f;
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(251,191,36,0.3);
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-alt {
+            background: #f8f9fa;
+        }
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #0f0f0f;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 40px 0 20px;
+            color: #0f0f0f;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .problem-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .solution-box {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .operator-quote {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 40px;
+            background: #0f0f0f;
+            color: white;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        .objection-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .objection-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .objection-item h4 {
+            color: #0f0f0f;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .objection-item p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        .what-you-get {
+            background: #0f0f0f;
+            color: white;
+            padding: 60px 0;
+        }
+        .what-you-get h2 {
+            color: white;
+        }
+        .deliverables {
+            list-style: none;
+            margin: 30px 0;
+        }
+        .deliverables li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .deliverables li:before {
+            content: "▸";
+            color: #fbbf24;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+        .urgency-box {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1f1f1f 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            border: 2px solid #fbbf24;
+        }
+        .urgency-box h3 {
+            color: #fbbf24;
+            margin-top: 0;
+        }
+        .guarantee-box {
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .guarantee-box h3 {
+            color: #10b981;
+            margin-top: 0;
+        }
+        .final-cta {
+            background: #0f0f0f;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .final-cta h2 {
+            color: white;
+        }
+        .micro-reassurance {
+            margin-top: 20px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        .identity-box {
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #0f0f0f;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subheadline { font-size: 1.1rem; }
+            .price-tag { font-size: 2rem; }
+            h2 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION - OPERATOR IDENTITY -->
+    <section class="hero">
+        <div class="container">
+            <h1>Thinkers Plan. Operators Ship.</h1>
+            <p class="subheadline">You've been thinking about better follow-up for months. Meanwhile, operators are building systems that work while they sleep. Time to choose which one you are.</p>
+            <div class="mechanism">Become an operator with a done-for-you follow-up system — built, deployed, and converting in 48 hours</div>
+            <div class="price-tag">$197/month</div>
+            <p class="price-note">Join the operators. Cancel anytime.</p>
+            <a href="#get-started" class="cta-button">Become An Operator</a>
+        </div>
+    </section>
+
+    <!-- THE CHOICE -->
+    <section class="section">
+        <div class="container">
+            <h2>Two Types of Business Owners</h2>
+            
+            <div class="problem-box">
+                <p><strong>The Thinker:</strong> Reads about follow-up strategies. Downloads templates. Adds "fix CRM" to their to-do list. Keeps planning. Keeps researching. Keeps losing leads to the operator down the street.</p>
+            </div>
+
+            <div class="solution-box">
+                <p><strong>The Operator:</strong> Builds the system. Deploys it. Lets it run. Wakes up to qualified conversations. Doesn't worry about follow-up because it's handled. Focuses on closing, not chasing.</p>
+            </div>
+
+            <p>Both started in the same place. Both had the same opportunity. But only one shipped.</p>
+
+            <div class="operator-quote">
+                "The operator doesn't have better ideas. The operator has better systems."
+            </div>
+        </div>
+    </section>
+
+    <!-- THE TRANSFORMATION -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>What Changes When You Become An Operator</h2>
+            <p>Right now, you're the bottleneck. Every lead depends on you remembering to follow up. On you having time to send that email. On you not getting distracted by the next urgent thing.</p>
+
+            <p><strong>That's not a business. That's a job with anxiety.</strong></p>
+
+            <p>When you become an operator, everything changes:</p>
+            <ul style="margin: 20px 0 20px 30px; font-size: 1.1rem; line-height: 2;">
+                <li>Leads get followed up instantly, not when you remember</li>
+                <li>Nurture happens automatically, not when you have time</li>
+                <li>Hot leads surface themselves, you don't have to hunt for them</li>
+                <li>Your calendar fills with qualified calls, not random inquiries</li>
+                <li>You focus on high-value work while the system handles the rest</li>
+            </ul>
+
+            <div class="identity-box">
+                You don't become an operator by working harder. You become an operator by building systems that work without you.
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SYSTEM -->
+    <section class="section">
+        <div class="container">
+            <h2>The Operator's System</h2>
+            <p>We're not giving you software and a handshake. We're building your entire follow-up infrastructure — the same kind operators use to scale without burning out.</p>
+
+            <p><strong>Here's what we build in 48 hours:</strong></p>
+            <ul style="margin: 20px 0 20px 30px; font-size: 1.1rem; line-height: 2;">
+                <li><strong>Your Lead Capture Engine</strong> — Forms, landing pages, and entry points that feed directly into your system</li>
+                <li><strong>Your Response Automation</strong> — Every lead gets instant, personalized follow-up that sounds like you wrote it</li>
+                <li><strong>Your Journey Maps</strong> — Custom paths based on lead behavior, interests, and readiness</li>
+                <li><strong>Your Qualification System</strong> — Smart scoring that surfaces hot leads when they're ready to buy</li>
+                <li><strong>Your Booking Integration</strong> — Qualified leads schedule directly on your calendar</li>
+                <li><strong>Your Visibility Dashboard</strong> — See exactly where every lead stands at a glance</li>
+            </ul>
+
+            <p>You don't build this. We do. You just operate it.</p>
+        </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="what-you-get">
+        <div class="container">
+            <h2>Your Operator Stack</h2>
+            <ul class="deliverables">
+                <li><strong>Complete System Architecture</strong> — Built from scratch for your specific business</li>
+                <li><strong>Unlimited Automation Sequences</strong> — Welcome, nurture, re-engagement — all running 24/7</li>
+                <li><strong>Smart Lead Routing</strong> — Right message, right time, right person</li>
+                <li><strong>Calendar Integration</strong> — Booked calls without the back-and-forth</li>
+                <li><strong>Behavioral Tracking</strong> — Know who's hot and who's not</li>
+                <li><strong>Monthly Optimization</strong> — We refine your system as your business grows</li>
+                <li><strong>Operator Support</strong> — Direct line to us when you need system adjustments</li>
+                <li><strong>48-Hour Deployment</strong> — From decision to live system in two days</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- OBJECTIONS -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>What Operators Ask</h2>
+            
+            <div class="objection-grid">
+                <div class="objection-item">
+                    <h4>"What if I'm not ready to be an operator?"</h4>
+                    <p>You are ready. The only difference between thinkers and operators is action. Thinkers wait until they feel ready. Operators build the system and figure it out. You're closer than you think.</p>
+                </div>
+
+                <div class="objection-item">
+                    <h4>"Will this actually feel like me?"</h4>
+                    <p>Yes. We build every sequence in your voice, based on how you actually talk to prospects. Your leads won't know it's automated. They'll just think you're incredibly responsive and organized.</p>
+                </div>
+
+                <div class="objection-item">
+                    <h4>"What if my business is different?"</h4>
+                    <p>Every operator thinks their business is the exception. Speakers, coaches, consultants, agencies — the pattern is the same. Leads come in. They need follow-up. Systems handle it better than humans. You're not different. You're just not automated yet.</p>
+                </div>
+
+                <div class="objection-item">
+                    <h4>"What if I want to change things later?"</h4>
+                    <p>Operators iterate. We expect you to want changes as you learn what works. That's why we include monthly optimization and priority support. Your system grows with you.</p>
+                </div>
+
+                <div class="objection-item">
+                    <h4>"Is $197/month worth it?"</h4>
+                    <p>Operators think in systems, not costs. One extra client per quarter pays for this system for a year. The real question: what's the cost of staying a thinker?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE OPERATOR'S DAY -->
+    <section class="section">
+        <div class="container">
+            <h2>A Day In The Life (30 Days From Now)</h2>
+            <p>6:30 AM: You wake up. Check your phone. Three leads came in overnight. All three got instant follow-up. One booked a call for Thursday. Another replied with a question — the system already answered it perfectly.</p>
+
+            <p>8:00 AM: You open your dashboard. See exactly where every lead stands. Who's engaged. Who's ready. Who needs a personal touch.</p>
+
+            <p>9:00 AM: Your first call. It's with a lead who was nurtured for two weeks by your system. They already trust you. The call is about specifics, not introductions.</p>
+
+            <p>2:00 PM: You close a deal. The lead came in 10 days ago. Your system did all the follow-up. You just showed up for the conversation.</p>
+
+            <p>5:00 PM: You shut down for the day. Leads are still coming in. The system is still working. You'll wake up to more conversations tomorrow.</p>
+
+            <p><strong>This is what operating looks like.</strong></p>
+        </div>
+    </section>
+
+    <!-- URGENCY -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="urgency-box">
+                <h3>Operator Pricing Ends Soon</h3>
+                <p>We're keeping founder pricing at $197/month for a limited number of operators. Once we hit capacity, we raise rates and slow down onboarding.</p>
+                <p style="margin-top: 20px; font-size: 1.2rem;">Lock in operator status now.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h3>The Operator Guarantee</h3>
+                <p>System live in 48 hours or you don't pay. Better lead engagement in 30 days or full refund. We're betting on operators because operators ship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="get-started">
+        <div class="container">
+            <h2>Stop Planning. Start Operating.</h2>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px;">Get the Follow-Up Foundation System. Join the operators. Build the system that builds your business.</p>
+            <div class="price-tag" style="margin-bottom: 10px; color: #fbbf24;">$197/month</div>
+            <p style="opacity: 0.8; margin-bottom: 30px;">48-hour deployment • Cancel anytime</p>
+            <a href="mailto:trueprodai@agentmail.to?subject=Follow-Up Foundation System - I'm Ready" class="cta-button">Become An Operator Now</a>
+            <p class="micro-reassurance">Thinkers wait. Operators act. Which are you?</p>
+        </div>
+    </section>
+
+    <footer style="background: #0f0f0f; color: rgba(255,255,255,0.6); padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <p>© 2026 True Products Network LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
